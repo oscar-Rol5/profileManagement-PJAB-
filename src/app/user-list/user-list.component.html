@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <button class="btn btn-success" id="create" ><a class="nav-link" routerLink="/adduser">Create a User</a></button>
+
+    <i class="fa-solid fa-circle-info" id="info" (click)="infoF()"></i>
+
+    <table class="table table-striped">
+
+        <thead class="thead-dark">
+    
+            <tr>
+    
+                <th scope="col" (click)="sortName()">Name</th>
+                <th scope="col" (click)="sortFname()">First Name</th>
+                <th scope="col" (click)="sortEmail()">Email</th>
+                <th scope="col" (click)="sortType()">Type</th>
+                <th scope="col">Options</th>
+    
+            </tr>
+            
+        </thead>
+    
+        <tbody>
+    
+            <tr *ngFor="let user of users">
+    
+                <td (click)="assign(user)">{{ user.name }}</td>
+                <td>{{ user.fname }}</td>
+                <td><a href="mailto:{{user.email}}">{{ user.email }}</a></td>
+                <td>{{ user.type }}</td>
+    
+                <td><button (click)="modify(user)" class="btn btn-primary">Edit</button>
+                <button style="margin-left: 40px;" (click)="delete(user)" class="btn btn-danger">Delete</button></td>
+    
+            </tr>
+    
+        </tbody>
+    
+    </table>
+
+    <div *ngIf="condition == true" id="selected">
+
+        <div class="card">
+            <img src="../../assets/img/cardFounder.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ selected.name }} {{ selected.fname }}</h5>
+              <p class="card-text">{{ selected.email }}</p>
+              <p class="card-text">{{ selected.type }}</p>
+            </div>
+          </div>
+
+    </div>
+
+</body>
+</html>
+
+
+

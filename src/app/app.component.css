@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+#otrocontainer{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#pcontainer{
+
+    width: 1080px;
+
+}
+
+#logo{
+
+    width: 100px;
+    height: 100px;
+
+}
+
+#fcontainer{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#iconosF{
+
+    display: inline-flex;
+    justify-content: space-between;
+
+}
+
+#footer{
+
+    width: 1100px;
+    height: 225px;
+    background-color: #4A654B;
+
+    /*position: absolute;*/
+
+    opacity: 0.8;
+
+    position:fixed;
+
+    padding-top: 50px;
+
+    margin-top: 50px;
+
+    bottom: 0; 
+
+}

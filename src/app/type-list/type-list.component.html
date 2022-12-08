@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button class="btn btn-success" id="create" ><a class="nav-link" routerLink="/addtype">Create a Type</a></button>
+
+    <table class="table table-striped">
+
+        <thead class="thead-dark">
+    
+            <tr>
+    
+                <th scope="col" (click)="sortId()">#</th>
+                <th scope="col" (click)="sortType()">Name</th>
+                <th scope="col">Options</th>
+                
+            </tr>
+            
+        </thead>
+    
+        <tbody>
+    
+            <tr *ngFor="let type of types">
+    
+                <td>{{ type.id }}</td>
+                <td>{{ type.type }}</td>
+    
+                <td><button (click)="modify(type)" class="btn btn-primary">Edit</button>
+                <button style="margin-left: 40px;" (click)="delete(type)" class="btn btn-danger">Delete</button></td>
+    
+            </tr>
+    
+    
+    
+        </tbody>
+    
+    </table>
+
+    
+
+</body>
+</html>
